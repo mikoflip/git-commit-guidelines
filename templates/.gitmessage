@@ -1,0 +1,82 @@
+#
+# --- GIT COMMIT GUIDELINES --------------------------------
+#
+# Remember to:
+# - Use the imperative mood in the subject line
+# - Keep the subject line under 50 characters
+# - Capitalize the subject line
+# - Do not end the subject line with a period
+# - Use the body to explain what and why vs. how
+# - Separate subject from body with a blank line
+# - Wrap the body and footer at 72 characters
+# - Use the footer to reference issues and breaking changes
+# - Use ! after scope for breaking changes (e.g., feat!:)
+# - Always include BREAKING: in footer when using !
+#
+# ----------------------------------------------------------
+#
+# Format:
+# <emoji> <scope>[!]: <description> (1 line - max 50 chars)
+# Note: Use ! for breaking changes, also include BREAKING: in footer
+# 
+# [Optional <body>: explain the what and why] (max 72 chars per line)
+# 
+# [Optional <footer>: link issues or describe breaking changes] (max 72 chars per line)
+#
+# ----------------------------------------------------------
+#
+# Common scopes:
+# 🚀 feat:     (new features)
+# 🐛 fix:      (bug fixes)
+# 🔥 hotfix:   (critical fixes)
+# 📝 docs:     (documentation)
+# ✅ test:     (testing)
+# ♻️  refactor: (code refactoring)
+# 💄 style:    (ui/styling)
+# 📦 deps:     (dependencies)
+# ⚙️  config:   (configuration)
+# 🗃️ db:       (database)
+# 🔒 security: (security)
+# ⚡ perf:     (performance)
+# 🚧 ci:       (ci/cd)
+# 🚀 deploy:   (deployment)
+# ⏪ revert:   (reverting)
+# 🏷️ release:  (releases)
+#
+# ----------------------------------------------------------
+#
+# Examples:
+#
+# Example 1: Simple one-line commit
+# 📝 docs: Update README with installation instructions
+#
+# ----------------------------
+#
+# Example 2: Feature with body and issue linking
+# 🚀 feat: Add user authentication system
+#
+# - Add JWT token generation and validation
+# - Add login/logout endpoints with session management
+# - Add password encryption using bcrypt
+#
+# This enables secure user access and prepares for role-based
+# permissions in the next release.
+#
+# closes #123
+# refs #456
+#
+# ----------------------------
+#
+# Example 3: Bug fix with breaking change
+# 🐛 fix!: Update API response format for error handling
+#
+# Change error response from string to object format to provide
+# more detailed error information including error codes and
+# suggested actions for client applications.
+#
+# BREAKING: Error responses now return objects instead of strings
+#
+# fixes #789
+#
+# --- GIT COMMIT GUIDELINES (END) --------------------------
+#
