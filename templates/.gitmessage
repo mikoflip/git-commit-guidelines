@@ -1,82 +1,48 @@
+# GIT COMMIT GUIDELINES ------------------------------------------------
 #
-# --- GIT COMMIT GUIDELINES --------------------------------
+# FORMAT:
+# <emoji> <scope>[!]: <keyword> <description> (max 50 chars)
 #
-# Remember to:
-# - Use the imperative mood in the subject line
-# - Keep the subject line under 50 characters
-# - Capitalize the subject line
-# - Do not end the subject line with a period
-# - Use the body to explain what and why vs. how
-# - Separate subject from body with a blank line
-# - Wrap the body and footer at 72 characters
-# - Use the footer to reference issues and breaking changes
-# - Use ! after scope for breaking changes (e.g., feat!:)
-# - Always include BREAKING: in footer when using !
+# [Optional context paragraph: explain what/why] (max 72 chars/line)
 #
-# ----------------------------------------------------------
+# [Optional bullet points:] (max 72 chars/line)
+# - Specific change 1
+# - Specific change 2
+# - Specific change 3
 #
-# Format:
-# <emoji> <scope>[!]: <description> (1 line - max 50 chars)
-# Note: Use ! for breaking changes, also include BREAKING: in footer
-# 
-# [Optional <body>: explain the what and why] (max 72 chars per line)
-# 
-# [Optional <footer>: link issues or describe breaking changes] (max 72 chars per line)
+# [Optional footer: BREAKING:/fixes/closes/refs #123] (max 72 chars/line)
 #
-# ----------------------------------------------------------
+# EMOJIS + SCOPES:
+# 🚀 init 🚀 feat 🐛 fix 🔥 hotfix 📝 docs ✅ test ♻️ refactor
+# 💄 style 📦 deps ⚙️ config 🗃️ db 🔒 security ⚡ perf 🚧 ci
+# 🚀 deploy ⏪ revert 🏷️ release
 #
-# Common scopes:
-# 🚀 feat:     (new features)
-# 🐛 fix:      (bug fixes)
-# 🔥 hotfix:   (critical fixes)
-# 📝 docs:     (documentation)
-# ✅ test:     (testing)
-# ♻️  refactor: (code refactoring)
-# 💄 style:    (ui/styling)
-# 📦 deps:     (dependencies)
-# ⚙️  config:   (configuration)
-# 🗃️ db:       (database)
-# 🔒 security: (security)
-# ⚡ perf:     (performance)
-# 🚧 ci:       (ci/cd)
-# 🚀 deploy:   (deployment)
-# ⏪ revert:   (reverting)
-# 🏷️ release:  (releases)
+# KEYWORDS:
+# Add Update Remove
 #
-# ----------------------------------------------------------
+# RULES:
+# - Imperative mood (Add/Update/Remove, not Added/Updated/Removed)
+# - Main message line max 50 chars, body lines max 72 chars per line
+# - Main message description starts capitalized, no period at end
+# - Bullet points require preceding of context paragraph
+# - Breaking changes: use <scope>!, and BREAKING: in footer
+# - Link issues: fixes #123, closes #456, refs #789
+# - Blank lines between main message, context paragraph, bullet points, footer
 #
-# Examples:
-#
-# Example 1: Simple one-line commit
-# 📝 docs: Update README with installation instructions
-#
-# ----------------------------
-#
-# Example 2: Feature with body and issue linking
-# 🚀 feat: Add user authentication system
-#
-# - Add JWT token generation and validation
-# - Add login/logout endpoints with session management
-# - Add password encryption using bcrypt
-#
-# This enables secure user access and prepares for role-based
-# permissions in the next release.
-#
-# closes #123
-# refs #456
-#
-# ----------------------------
-#
-# Example 3: Bug fix with breaking change
+# EXAMPLE (ALL OPTIONAL SECTIONS INCLUDED):
 # 🐛 fix!: Update API response format for error handling
 #
 # Change error response from string to object format to provide
 # more detailed error information including error codes and
 # suggested actions for client applications.
 #
+# - Replace string error messages with structured error objects
+# - Add error codes for programmatic error handling
+# - Include suggested user actions in error responses
+# - Update error validation middleware for new format
+#
 # BREAKING: Error responses now return objects instead of strings
+# fixes #123
 #
-# fixes #789
-#
-# --- GIT COMMIT GUIDELINES (END) --------------------------
+# GIT COMMIT GUIDELINES (END) ------------------------------------------
 #
